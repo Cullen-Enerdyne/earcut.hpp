@@ -18,7 +18,7 @@ template <std::size_t I, typename T> struct nth {
     inline static typename std::tuple_element<I, T>::type
     get(const T& t) { return std::get<I>(t); };
 };
-
+////changes 
 template <>
 struct nth<0, glm::vec3> {
     inline static auto get(const glm::vec3 &t) {
@@ -32,7 +32,7 @@ struct nth<1, glm::vec3> {
         return t.y;
     };
 };
-
+//////
 }
 
 namespace detail {
